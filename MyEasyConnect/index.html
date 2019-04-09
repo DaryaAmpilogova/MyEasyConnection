@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="smartphone-style.css" />
+	
+</head>
+
+<body class="centrarJustificar">
+
+	<div id="todo">
+		<!--submenú + Recuadros de menú-->
+		<!--submenú-->
+		<div id="submenu">
+
+			<div id="logo" class="centrarTotal">
+				<img src="images/logo-easy-connect_SBS.png" />
+			</div>
+
+			<div id="derecha" class="centrarAlinear">
+				<div id="user" class="centrarTotal">
+					<div id="combo">
+						<img id="current_user_img" src=""/>
+						<div id="submenuCirculo" class="comboCirculo">
+							<img src="images/Ellipse 1.png" />
+							<span class="textCirculo">6</span>
+						</div>
+					</div>
+					<span id="current_user_name"></span>
+				</div>
+
+				<div id="settings">
+					<div>
+						<img src="images/config.png" />
+					</div>
+					<div class="clear-Both"></div>
+					<span>SETTINGS</span>
+				</div>
+
+				<div id="puntosHeader">
+					<img src="images/dot3.png" />
+				</div>
+
+				<div id="logout">
+					<div>
+						<img src="images/logout.png" />
+					</div>
+					<div class="clear-Both"></div>
+					<span>LOGOUT</span>
+				</div>
+			</div>
+		</div>
+
+		<!--Recuadros de menú-->
+		<div id="menu" class="seccion centrarTotal">
+			<div class="recuadro">
+				<img src="images/warnings-off2.png" />
+				<img class="medioTring" src="images/Layer 3.png" />
+				<img class="recudroCuadros" src="images/Layer 2.png" />
+				<div class="comboCirculo recuadroCirculo">
+					<img src="images/Ellipse 1.png" />
+					<span class="textCirculo">
+						2
+					</span>
+				</div>
+				<div class="recuadroTexto">
+					<span>
+						ALERTS AND
+						<br/>MESSAGING
+					</span>
+				</div>
+			</div>
+
+			<div class="recuadro">
+				<img src="images/reminders-calendar.png" />
+				<img class="medioTring" src="images/Layer 3.png" />
+				<img class="recudroCuadros" src="images/Layer 2.png" />
+				<div class="comboCirculo recuadroCirculo">
+					<img src="images/Ellipse 1.png" />
+					<span class="textCirculo">
+						1
+					</span>
+				</div>
+				<div class="recuadroTexto">
+					<span>
+						REMINDERS
+						<br/>CALENDAR
+					</span>
+				</div>
+			</div>
+
+			<div class="recuadro">
+				<img src="images/ties2.png" />
+				<img class="medioTring" src="images/Layer 3.png" />
+				<img class="recudroCuadros" src="images/Layer 2.png" />
+				<div class="comboCirculo recuadroCirculo">
+					<img src="images/Ellipse 1.png" />
+					<span class="textCirculo">
+						2
+					</span>
+				</div>
+				<div class="recuadroTexto">
+					<span>
+						CIRCLE
+						<br/>OF CARE
+					</span>
+				</div>
+			</div>
+
+			<div class="recuadro">
+				<img src="images/daily-care-o-gram.png" />
+				<img class="medioTring" src="images/Layer 3.png" />
+				<img class="recudroCuadros" src="images/Layer 2.png" />
+				<div class="comboCirculo recuadroCirculo">
+					<img src="images/Ellipse 1.png" />
+					<span class="textCirculo">
+						1
+					</span>
+				</div>
+				<div class="recuadroTexto">
+					<span>
+						DAILY
+						<br/>CARE-O-GRAM
+					</span>
+				</div>
+			</div>
+
+			<div class="recuadro">
+				<img src="images/casemanager.png" />
+				<img class="medioTring" src="images/Layer 3.png" />
+				<img class="recudroCuadros" src="images/Layer 2.png" />
+				<div class="recuadroTexto">
+					<span>
+						REPOSITORY
+					</span>
+				</div>
+			</div>
+
+			<div class="recuadro">
+				<img src="images/my-health-reports (1).png" />
+				<img class="medioTring" src="images/Layer 3.png" />
+				<img class="recudroCuadros" src="images/Layer 2.png" />
+				<div class="recuadroTexto">
+					<span>
+						REPORTS
+					</span>
+				</div>
+			</div>
+
+			<div class="recuadro">
+				<img src="images/reward-points.png" />
+				<img class="medioTring" src="images/Layer 3.png" />
+				<img class="recudroCuadros" src="images/Layer 2.png" />
+				<div id="puntos">
+					<span class="textCirculo" style="font-weight:normal;">
+						Total Points 725
+					</span>
+				</div>
+				<div class="recuadroTexto">
+					<span>
+						MY POINTS
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!--Alerta and messaging -->
+		<div class="titulo centrarAlinear">
+			<img class="tituloImg" src="images/warnings-off2.png" />
+			<span class="textoTitulo">ALERTS AND MESSAGING</span>
+		</div>
+
+		<div id="messaging" class="seccion">
+			<div class="fila">
+
+				<div id="checkBox" class="colGeneral centrarTotal">
+					<img src="images/checkBoxOrange.png" />
+				</div>
+
+				<div id="newMessage" class="colGeneral centrarTotal">
+					<span style="color: white;">New Message</span>
+				</div>
+
+				<div id="inbox" class="colGeneral centrarTotal">
+					<div id="messagingCirculo" class="comboCirculo">
+						<img src="images/Ellipse 1.png" />
+						<span class="textCirculo">
+							2
+						</span>
+					</div>
+					<span>Inbox</span>
+				</div>
+
+				<div id="sent" class="colGeneral centrarTotal">
+					<span>Sent</span>
+				</div>
+
+				<div id="searchCol" class="centrarAlinear">
+					<div id="search" class="centrarAlinear">
+						<span id="textSearch">Search</span>
+						<img id="imgLupa" src="images/lupa.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="email" meta-email="1">
+				<div class="fila">
+
+					<div id="checkBox" class="col centrarTotal">
+						<img src="images/checkBoxCheckt.png" />
+					</div>
+
+					<div class="col estado centrarAlinear">
+						<img src="images/leido.png">
+					</div>
+
+					<div class="col sender centrarAlinear">
+						<span class="textSender">John Snow</span>
+					</div>
+
+					<div class="col subject centrarAlinear">
+						<span class="textSubject">Hi Friend!!</span>
+					</div>
+
+					<div class="date centrarAlinear">
+						<div>
+							<span class="textDate">12 April 2014</span>
+						</div>
+						<img src="images/derecha.png">
+					</div>
+
+				</div>
+
+				<div class="filaGrande">
+					<div id="msn">
+						<div id="subjRecuadro" class="centrarAlinear">
+							<h1>Hi Friend!!</h1>
+						</div>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+						deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class="botones centrarAlinear">
+						<div class="boton centrarTotal replay">
+							<span>REPLAY</span>
+						</div>
+						<div class="boton centrarTotal delete" meta-email="1">
+							<span>DELETE</span>
+						</div>
+					</div>
+					<div class="clear-both"></div>
+				</div>
+			</div>
+
+			<div class="email" meta-email="2">
+				<div class="fila">
+
+					<div id="checkBox" class="col centrarTotal">
+						<img src="images/checkBox.png" />
+					</div>
+
+					<div class="col estado centrarAlinear">
+						<img src="images/unread.png">
+					</div>
+
+					<div class="col sender centrarAlinear">
+						<span class="textSender">Richard Chaning</span>
+					</div>
+
+					<div class="col subject centrarAlinear">
+						<span class="textSubject">Memorial Clinic</span>
+					</div>
+
+					<div class="date centrarAlinear">
+						<div>
+							<span class="textDate">12 April 2014</span>
+						</div>
+
+						<img src="images/derecha.png">
+					</div>
+				</div>
+				<div class="filaGrande">
+					<div id="msn">
+						<div id="subjRecuadro" class="centrarAlinear">
+							<h1>Memorial Clinic</h1>
+						</div>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+						deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class="botones centrarAlinear">
+						<div class="replay boton centrarTotal">
+							<span>REPLAY</span>
+						</div>
+						<div class="delete boton centrarTotal" meta-email="2">
+							<span>DELETE</span>
+						</div>
+					</div>
+					<div class="clear-both"></div>
+				</div>
+			</div>
+
+			<div class="email" meta-email="3">
+				<div class="fila">
+					<div id="checkBox" class="col centrarTotal">
+						<img src="images/checkBox.png" />
+					</div>
+
+					<div class="col estado centrarAlinear">
+						<img src="images/unread.png">
+					</div>
+
+					<div class="col sender centrarAlinear">
+						<span class="textSender">Elisabeth Bale</span>
+					</div>
+
+					<div class="col subject centrarAlinear">
+						<span class="textSubject">From Connecticut</span>
+					</div>
+
+					<div class="date centrarAlinear">
+						<div>
+							<span class="textDate">21 June 2013</span>
+						</div>
+
+						<img src="images/derecha.png">
+					</div>
+				</div>
+				<div class="filaGrande">
+					<div id="msn">
+						<div id="subjRecuadro" class="centrarAlinear">
+							<h1>From Connecticut</h1>
+						</div>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+						deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class="botones centrarAlinear">
+						<div class="replay boton centrarTotal">
+							<span>REPLAY</span>
+						</div>
+						<div class="delete boton centrarTotal" meta-email="3">
+							<span>DELETE</span>
+						</div>
+					</div>
+					<div class="clear-both"></div>
+				</div>
+			</div>
+
+			<div class="email" meta-email="4">
+				<div class="fila">
+					<div id="checkBox" class="col centrarTotal">
+						<img src="images/checkBox.png" />
+					</div>
+
+					<div class="col estado centrarAlinear">
+						<img src="images/unread.png">
+					</div>
+
+					<div class="col sender centrarAlinear">
+						<span class="textSender">Sarah Connor</span>
+					</div>
+
+					<div class="col subject centrarAlinear">
+						<span class="textSubject">Cyberdyne Systems</span>
+					</div>
+
+					<div class="date centrarAlinear">
+						<div>
+							<span class="textDate">20 June 2013</span>
+						</div>
+
+						<img src="images/derecha.png">
+					</div>
+				</div>
+				<div class="filaGrande">
+					<div id="msn">
+						<div id="subjRecuadro" class="centrarAlinear">
+							<h1>Cyberdyne Systems</h1>
+						</div>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+						deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class="botones centrarAlinear">
+						<div class="replay boton centrarTotal">
+							<span>REPLAY</span>
+						</div>
+						<div class="delete boton centrarTotal" meta-email="4">
+							<span>DELETE</span>
+						</div>
+					</div>
+					<div class="clear-both"></div>
+				</div>
+			</div>
+
+			<div class="email" meta-email="5">
+				<div class="fila">
+					<div id="checkBox" class="col centrarTotal">
+						<img src="images/checkBox.png" />
+					</div>
+
+					<div class="col estado centrarAlinear">
+						<img src="images/unread.png">
+					</div>
+
+					<div class="col sender centrarAlinear">
+						<span class="textSender">Arturo González</span>
+					</div>
+
+					<div class="col subject centrarAlinear">
+						<span class="textSubject">Recordatorio Consulta</span>
+					</div>
+
+					<div class="date centrarAlinear">
+						<div>
+							<span class="textDate">20 June 2013</span>
+						</div>
+
+						<img src="images/derecha.png">
+					</div>
+				</div>
+				<div class="filaGrande">
+					<div id="msn">
+						<div id="subjRecuadro" class="centrarAlinear">
+							<h1>Recordatorio Consulta</h1>
+						</div>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam.</p>
+						<p class="textMsn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+							eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+						deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<div class="botones centrarAlinear">
+						<div class="replay boton centrarTotal">
+							<span>REPLAY</span>
+						</div>
+						<div class="delete boton centrarTotal" meta-email="5">
+							<span>DELETE</span>
+						</div>
+					</div>
+					<div class="clear-both"></div>
+				</div>
+			</div>
+
+			<div class="fila">
+				<div id="previously" class="centrarTotal">
+					<span><span id="remain"></span> Previously Messages</span>
+				</div>
+			</div>
+		</div>
+
+		<!--Reminders Calendar -->
+		<div id="remainderCalendar">
+			<div class="titulo centrarAlinear">
+				<div class="centrarAlinear">
+					<img class="tituloImg" src="images/reminders-calendar.png" />
+					<span class="textoTitulo">REMINDER CALENDAR</span>
+				</div>
+
+				<div class="tituloDerecha centrarAlinear">
+					<span id="textoTituloCal" class="textoTitulo">DAILY/WEEKLY/MONTHLY</span>
+					<img src="images/square.png" />
+					<img src="images/list.png" />
+				</div>
+			</div>
+
+			<div id="calendar" class="seccion">
+				<!-- INFO -->
+				<div id="comboCalendar" class="centrarTotal">
+					<div id="calInfo">
+
+						<div id="comboToday">
+							<div id="today">
+								<span>TODAY</span>
+							</div>
+							<div id="todayDate">
+								<span id="date"></span>
+							</div>
+						</div>
+
+						<div id="calInfoCliente" class="centrarAlinear">
+							<div id="imgTel" class="centrarTotal">
+								<img src="images/telefono.png">
+							</div>
+							<div>
+								<div>
+									<span>Call Dr. Smith</span>
+								</div>
+
+								<div>
+									<span class="segInfo">675 557 890</span>
+								</div>
+							</div>
+
+						</div>
+
+						<div id="calInfoZone" class="centrarAlinear">
+
+							<div id="imgCal" class="centrarTotal">
+								<img src="images/calendario.png">
+							</div>
+
+							<div>
+								<div>
+									<span>Ocular Test</span>
+								</div>
+
+								<div>
+									<span class="segInfo">Memorial Clinic Miami</span>
+								</div>
+							</div>
+
+							<img src="images/cruz.png">
+
+						</div>
+
+						<div id="calcInfoInfo">
+							<div id="calcInfoFecha" class="centrarAlinear">
+								<span>2 July 2012 /
+									<span id="clacInfoHora">14:30</span>
+								</span>
+							</div>
+							<div>
+								<p class="textCal">Lorem ipsum dolor sit amet dolorem proident utilitatis magnus agris.</p>
+								<p class="textCal">Abutebatur architecto propter ut materia.</p>
+								<p class="textCal">Quam quo aliquip. officii voluptatem.</p>
+							</div>
+							<div id="comboBotonesCal" class="centrarTotal">
+								<div id="change" class="boton centrarTotal">
+									<span>CHANGE</span>
+								</div>
+								<div id="done" class="boton centrarTotal">
+									<span>DONE</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- CALENDARIO -->
+					<div id="calCalendario">
+						<div id="calCalFecha" class="centrarAlinear">
+							<div class="centrarTotal">
+								<img id="imgIzquierdaCal" src="images/izquierdaGrande.png">
+								<span id="calDate"></span>
+								<img id="imgDerechaCal" src="images/derechaGrande.png">
+							</div>
+						</div>
+						<div id="calendarioTable">
+							<div id="cabezal" class="centrarTotal">
+								<div class="HcalCol">S</div>
+								<div class="HcalCol">M</div>
+								<div class="HcalCol">T</div>
+								<div class="HcalCol">W</div>
+								<div class="HcalCol">T</div>
+								<div class="HcalCol">F</div>
+								<div class="HcalCol">S</div>
+							</div>
+							<div class="row centrarTotal">
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+							</div>
+							<div class="row centrarTotal">
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+							</div>
+							<div class="row centrarTotal">
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+							</div>
+							<div class="row centrarTotal">
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+							</div>
+							<div class="row centrarTotal">
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+							</div>
+							<div class="row centrarTotal">
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+								<div class="calCol"><span></span></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div id="circleOfCare">
+			<!--Circle of Care -->
+			<div id="tCare" class="titulo centrarAlinear">
+				<img class="tituloImg" src="images/ties2.png" />
+				<span class="textoTitulo">CIRCLE OF CARE</span>
+			</div>
+
+			<div id="sCare" class="seccion">
+				<div id="cHeader" >
+					<div id="cFind" class="centrarTotal">
+						<span>FIND</span>
+					</div>
+					<div id="cCircle" class="centrarTotal">
+						<span>MY CIRCLE OF CARE</span>
+					</div>
+					<div id="cPending" class="centrarTotal">
+						<span>PENDING</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
