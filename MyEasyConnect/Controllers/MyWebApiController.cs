@@ -45,14 +45,45 @@ namespace MyEasyConnect.Controllers
                         {
                             UserRS = user
                         };
-
                         return request;
-
                     }
                 }
-            }
+            }                
+        }
 
-                
+        // Agafar els punts del usuari
+        [HttpPost]
+        public UserPointsRS GetPoints()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
+
+            string sql = "SELECT POINTS FROM END_USER WHERE ID = 6";
+
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                conn.Open();
+
+                using (OracleCommand cmd = new OracleCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql.ToString();
+                    cmd.CommandType = CommandType.Text;
+
+                    using (OracleDataReader dr = cmd.ExecuteReader())
+                    {
+                        UserPoints punctuation = new UserPoints();
+                        dr.Read();
+
+                        punctuation.Points = dr.GetInt32(0);
+
+                        UserPointsRS point = new UserPointsRS
+                        {
+                            PointsRS = punctuation
+                        };
+                        return point;
+                    }                    
+                }
+            }            
         }
     }
 }
