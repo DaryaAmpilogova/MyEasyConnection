@@ -19,7 +19,7 @@ namespace MyEasyConnect.Controllers
 
             string connectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
 
-            string sql = "SELECT NAME, SURNAMES FROM END_USER WHERE ID = 6";
+            string sql = "SELECT NAME, SURNAMES, AVATAR FROM END_USER WHERE ID = 6";
 
             using (OracleConnection conn = new OracleConnection(connectionString))
             {
@@ -34,12 +34,12 @@ namespace MyEasyConnect.Controllers
 
                     using (OracleDataReader dr = cmd.ExecuteReader())
                     {
-                        CurrentUser user = new CurrentUser();
+                        User user = new User();
                         dr.Read();
 
                         user.Name = dr.GetString(0);
-                        user.Subname = dr.GetString(1);
-                        user.Photo = "/images/senior.png";
+                        user.Surnames = dr.GetString(1);
+                        user.Avatar = (dr.IsDBNull(2)) ? " " : dr.GetString(2);
 
                         CurrentUserRS request = new CurrentUserRS
                         {
@@ -71,7 +71,7 @@ namespace MyEasyConnect.Controllers
 
                     using (OracleDataReader dr = cmd.ExecuteReader())
                     {
-                        UserPoints punctuation = new UserPoints();
+                        User punctuation = new User();
                         dr.Read();
 
                         punctuation.Points = dr.GetInt32(0);
