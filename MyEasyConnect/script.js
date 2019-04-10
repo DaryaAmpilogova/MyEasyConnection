@@ -106,3 +106,9 @@ $.post(uri + "GetPoints")
     .done(function (data) {
         document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
     });
+
+// REMINDERS IN THE CALENDAR
+$.post(uri + "GetReminders")
+    .done(function (data) {
+        document.querySelector("#user_points").innerHTML = "haloTotal Points " + data.PointsRS.Points;
+    });
