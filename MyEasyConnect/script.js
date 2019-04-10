@@ -98,3 +98,8 @@ $.post(uri)
         document.querySelector("#current_user_img").attr('src', data.UserRS.Photo);
     });
 
+// POINTS
+$.post(uri)
+    .done(function (data) {
+        document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
+    });

@@ -7,10 +7,8 @@ namespace MyEasyConnect.Models
 {
     public class CurrentUser
     {
-
         public string Name { get; set; }
         public string Subname { get; set; }
         public string Photo { get; set; }
-
-    }
+    }    
 }
