@@ -8,6 +8,6 @@ namespace MyEasyConnect.Models
     // Classe per agafar les dades del punts
     public class UserPointsRS
     {
-        public UserPoints PointsRS { get; set; }
+        public User PointsRS { get; set; }
     }
 }

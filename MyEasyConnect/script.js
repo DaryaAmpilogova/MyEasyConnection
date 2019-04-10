@@ -90,16 +90,19 @@ function setCalDays(){
  * WEB API
  */
 
-var uri = "api/mywebapi";
+var uri = "api/mywebapi/";
 
-$.post(uri)
+/*
+ * Submenú
+ */  
+$.post(uri + "GetCurrentUser")
     .done(function (data) {
         document.querySelector("#current_user_name").innerHTML = data.UserRS.Name + " " + data.UserRS.Subname;
-        document.querySelector("#current_user_img").attr('src', data.UserRS.Photo);
+        document.querySelector("#current_user_img").src = data.UserRS.Avatar;
     });
 
 // POINTS
-$.post(uri)
+$.post(uri + "GetPoints")
     .done(function (data) {
         document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
     });
