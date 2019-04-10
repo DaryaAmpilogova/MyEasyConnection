@@ -128,6 +128,7 @@
     </Compile>
     <Compile Include="Models\CurrentUserRQ.cs" />
     <Compile Include="Models\CurrentUserRS.cs" />
+    <Compile Include="Models\Reminder.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserPointsRS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
