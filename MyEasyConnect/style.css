@@ -360,222 +360,221 @@
             right: -2px;
         }
 
-        /*
+/*
          *  Calendar INFO
          */
-        .textCal {
-            margin-left: 20px;
-            margin-right: 20px;
-            font-size: 16px;
-        }
+.textCal {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
 
-        .segInfo {
-            font-size: 16px;
-        }
+.segInfo {
+    font-size: 16px;
+}
 
-        #calendar {
-            border: 2px solid rgb(134, 134, 134);
-            background-color: rgb(251, 252, 254);
-            width: 940px;
-        }
+#calendar {
+    border: 2px solid rgb(134, 134, 134);
+    background-color: rgb(251, 252, 254);
+    width: 940px;
+}
 
-        #calInfo {
-            width: 350px;
-            height: 460px;
-            color: rgb(134, 134, 134)
-        }
+#calInfo {
+    width: 350px;
+    height: 460px;
+    color: rgb(134, 134, 134)
+}
 
-        #calcInfoInfo {
-            position: relative;
-            width: 350px;
-            height: 215px;
-            background-color: rgb(230, 230, 230);
-        }
+#calcInfoInfo {
+    position: relative;
+    width: 350px;
+    height: 215px;
+    background-color: rgb(230, 230, 230);
+}
 
-        #calcInfoFecha {
-            height: 55px;
-            font-size: 18px;
-            font-weight: normal;
-            margin-left: 20px;
-            color: rgb(95, 95, 95);
-        }
+#calcInfoFecha {
+    height: 55px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 20px;
+    color: rgb(95, 95, 95);
+}
 
-        #clacInfoHora {
-            font-size: 22px;
-            color: rgb(95, 95, 95);
-            font-weight: bold;
-        }
+#clacInfoHora {
+    font-size: 22px;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+}
 
-        #comboCalendar {
-            height: 515px;
-        }
+#comboCalendar {
+    height: 515px;
+}
 
-        #comboBotonesCal {
-            position: absolute;
-            bottom: 0px;
-            width: 350px;
-            height: 65px;
-        }
+#comboBotonesCal {
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    height: 65px;
+}
 
-        #done,
-        #change {
-            width: 85px;
-            height: 35px;
-        }
+#done,
+#change {
+    width: 85px;
+    height: 35px;
+}
 
-        #done {
-            margin-left: 25px;
-        }
+#done {
+    margin-left: 25px;
+}
 
-        #imgCal,
-        #imgTel {
-            width: 70px;
-            height: 75px;
-        }
+#imgCal,
+#imgTel {
+    width: 70px;
+    height: 75px;
+}
 
-        #calInfoCliente,
-        #calInfoZone {
-            background-color: rgb(254, 79, 60);
-            font-weight: normal;
-            text-align: left;
-            color: white;
-            font-size: 20px;
-        }
+#calInfoCliente,
+#calInfoZone {
+    background-color: rgb(254, 79, 60);
+    font-weight: normal;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+}
 
-        #calInfoZone {
-            margin-top: 15px;
-            position: relative;
-        }
+#calInfoZone {
+    margin-top: 15px;
+    position: relative;
+}
 
-        #calInfoZone>img {
-            position: absolute;
-            top: -1px;
-            right: -1px;
-        }
+    #calInfoZone > img {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+    }
 
-        #today,
-        #todayDate {
-            font-size: 24px;
-        }
+#today,
+#todayDate {
+    font-size: 24px;
+}
 
-        #todayDate {
-            font-weight: normal
-        }
+#todayDate {
+    font-weight: normal
+}
 
-        #comboToday {
-            height: 80px;
-            width: 350px;
-            line-height: 1.4;
-        }
+#comboToday {
+    height: 80px;
+    width: 350px;
+    line-height: 1.4;
+}
 
-        /*
+/*
          * Calendario "Imagen"
          */
-        #remainderCalendar{
-            margin-bottom: 20px;
-        }
+#remainderCalendar {
+    margin-bottom: 20px;
+}
 
-        #calCalendario {
-            margin-left: 35px;
-            width: 450px;
-            height: 460px;
-        }
+#calCalendario {
+    margin-left: 35px;
+    width: 450px;
+    height: 460px;
+}
 
-        /*
+/*
          * Calendario Cavezal
          */
-        #calCalFecha {
-            width: 100%;
-            height: 80px;
-            font-size: 24px;
-            color: rgb(134, 134, 134);
-        }
+#calCalFecha {
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+    color: rgb(134, 134, 134);
+}
 
-        #calCalFecha>div {
-            position: relative;
-            width: 100%;
-        }
+    #calCalFecha > div {
+        position: relative;
+        width: 100%;
+    }
 
-        #imgIzquierdaCal,
-        #imgDerechaCal {
-            position: absolute;
-        }
+#imgIzquierdaCal,
+#imgDerechaCal {
+    position: absolute;
+}
 
-        #imgIzquierdaCal {
-            left: 0px;
-        }
+#imgIzquierdaCal {
+    left: 0px;
+}
 
-        #imgDerechaCal {
-            right: 0px;
-        }
+#imgDerechaCal {
+    right: 0px;
+}
 
-        /*
+/*
          * Tabla Calendario
          */
-        #cabezal,
-        .row{
-            height: 55px;
-            border: 0px;
-        }
+#cabezal,
+.row {
+    height: 55px;
+    border: 0px;
+}
 
-        .HcalCol,
-        .calCol{
-            float: left;
-            width: 64.2px;
-            border: 0px;
-            color: rgb(130, 130, 130);
-            font-size: 22px;
-        }
+.HcalCol,
+.calCol {
+    float: left;
+    width: 64.2px;
+    border: 0px;
+    color: rgb(130, 130, 130);
+    font-size: 22px;
+}
 
-        .calCol{
-             font-weight: normal;
-        } 
+.calCol {
+    font-weight: normal;
+}
 
-        #cabezal {
-            background-color: rgb(0, 218, 191);
-            color: rgb(128, 115, 122);
-        }
+#cabezal {
+    background-color: rgb(0, 218, 191);
+    color: rgb(128, 115, 122);
+}
 
-        /*
+/*
          * Circle of care
          */
-        #tCare{
-            margin-bottom: 30px;
-        }
+#tCare {
+    margin-bottom: 30px;
+}
 
-        #sCare{
-            margin-bottom: 225px;
-            border: 1px solid black;
-        }
+#sCare {
+    margin-bottom: 225px;
+    border: 1px solid black;
+}
 
-        #cFind,
-        #cCircle,
-        #cPending{
-           height: 60px;
-           float: left;
-        }
+#cFind,
+#cCircle,
+#cPending {
+    height: 60px;
+    float: left;
+}
 
-        #cFind{
-            width: 285px;
-        }
+#cFind {
+    width: 285px;
+}
 
-        #cFind,
-        #cCircle{
-            border-right: 1px solid black;
-        }
+#cFind,
+#cCircle {
+    border-right: 1px solid black;
+}
 
-        #cCircle{
-            width: 355px;
-        }
+#cCircle {
+    width: 355px;
+}
 
-        #cPending{
-            width: 300px;
-        }
+#cPending {
+    width: 300px;
+}
 
-        /*
+/*
          * Funcionalidades
          */
-        .boton:hover {
-            filter: hue-rotate(180deg);
-        }
-
+.boton:hover {
+    filter: hue-rotate(180deg);
+}

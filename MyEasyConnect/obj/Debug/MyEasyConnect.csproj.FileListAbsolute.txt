@@ -63,7 +63,6 @@ C:\Users\c.busquets\source\repos\MyEasyConnect\MyEasyConnection\MyEasyConnect\bi
 C:\Users\c.busquets\source\repos\MyEasyConnect\MyEasyConnection\MyEasyConnect\bin\System.Web.Http.WebHost.xml
 C:\Users\c.busquets\source\repos\MyEasyConnect\MyEasyConnection\MyEasyConnect\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\c.busquets\source\repos\MyEasyConnect\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.csproj.CopyComplete
-C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\MyEasyConnect.dll.config
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\MyEasyConnect.dll
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\MyEasyConnect.pdb
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\roslyn\csc.exe
@@ -128,3 +127,4 @@ C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\ob
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.csproj.CopyComplete
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.dll
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.pdb
+C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\MyEasyConnect.dll.config
