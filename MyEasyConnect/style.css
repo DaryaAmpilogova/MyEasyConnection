@@ -170,7 +170,7 @@
         }
 
         .subject {
-            width: 440px;
+            width: 400px;
         }
 
         .textSubject,
@@ -218,7 +218,7 @@
             color: rgb(255, 80, 63);
         }
 
-        #checkBox {
+        .checkBox {
             width: 65px;
         }
 
@@ -340,7 +340,7 @@
             float: right;
         }
 
-        #subjRecuadro {
+        .subjRecuadro {
             height: 60px;
         }
 
