@@ -60,9 +60,9 @@ function monthChange(fecha) {
     setCalDays();
 }
 
-function setCalDays(){
-	// *daysInMonth - https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d
-	var daysInMonth = 32 - new Date(today.getFullYear(), today.getMonth() + motnhModifier, 32).getDate();
+function setCalDays() {
+    // *daysInMonth - https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d
+    var daysInMonth = 32 - new Date(today.getFullYear(), today.getMonth() + motnhModifier, 32).getDate();
 
 
     for (var i = 0; i < daysMonth.length; i++) {
@@ -81,7 +81,7 @@ function setCalDays(){
 var uri = "api/mywebapi/";
 
 /*
- * Submen�
+ * Submenú
  */
 $.post(uri + "GetCurrentUser")
     .done(function (data) {
@@ -90,10 +90,11 @@ $.post(uri + "GetCurrentUser")
     });
 
 
-// Puntuaci�
+// Puntuació
 $.post(uri + "GetPoints")
     .done(function (data) {
-        document.querySelector("#user_points").innerText = "Total Points " + data.PointsRS.Points;
+        // Li passem la informació dels punts del usuari dins la seva posició del html
+        document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
     });
 
 // REMINDERS IN THE CALENDAR
