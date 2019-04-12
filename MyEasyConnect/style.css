@@ -1,581 +1,580 @@
-    * {
-            margin: 0px;
-            padding: 0px;
-        }
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
-        body {
-            text-align: center;
-            font-size: 14.96px;
-            font-family: Arial;
-            font-weight: bold;
-        }
+body {
+    text-align: center;
+    font-size: 14.96px;
+    font-family: Arial;
+    font-weight: bold;
+}
 
-        h1 {
-            margin-left: 65px;
-            font-size: 24px;
-            font-weight: normal;
-            color: rgb(95, 95, 95);
-        }
+h1 {
+    margin-left: 65px;
+    font-size: 24px;
+    font-weight: normal;
+    color: rgb(95, 95, 95);
+}
 
-        p {
-            text-align: left;
-            margin-left: 65px;
-            margin-right: 65px;
-            color: rgb(95, 95, 95);
-            font-weight: normal;
-        }
+p {
+    text-align: left;
+    margin-left: 65px;
+    margin-right: 65px;
+    color: rgb(95, 95, 95);
+    font-weight: normal;
+}
 
-        .centrarAlinear,
-        .centrarJustificar,
-        .centrarTotal {
-            display: flex;
-        }
+.centrarAlinear,
+.centrarJustificar,
+.centrarTotal {
+    display: flex;
+}
 
-        .centrarJustificar,
-        .centrarTotal {
-            justify-content: center;
-        }
+.centrarJustificar,
+.centrarTotal {
+    justify-content: center;
+}
 
-        .centrarAlinear,
-        .centrarTotal {
-            align-items: center;
-        }
+.centrarAlinear,
+.centrarTotal {
+    align-items: center;
+}
 
-        .seccion {
-            display: inline-block;
-        }
+.seccion {
+    display: inline-block;
+}
 
-        .miniSeccion {
-            border: solid blue;
-        }
+.miniSeccion {
+    border: solid blue;
+}
 
-        .recuadro {
-            margin: 10px 10px;
-            height: 150px;
-            width: 295px;
-            border: 1px solid rgb(204, 207, 214);
-            background-color: rgb(244, 245, 247);
-            float: left;
-            position: relative;
-        }
+.recuadro {
+    margin: 10px 10px;
+    height: 150px;
+    width: 295px;
+    border: 1px solid rgb(204, 207, 214);
+    background-color: rgb(244, 245, 247);
+    float: left;
+    position: relative;
+}
 
-        .recuadro>img:first-child {
-            position: absolute;
-            top: 15px;
-            left: 27px;
-        }
+    .recuadro > img:first-child {
+        position: absolute;
+        top: 15px;
+        left: 27px;
+    }
 
-        .medioTring {
-            position: absolute;
-            bottom: 2px;
-            right: 2px;
-        }
+.medioTring {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
 
-        .recudroCuadros {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-        }
+.recudroCuadros {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
 
-        .recuadroCirculo {
-            position: absolute;
-            top: 9px;
-            right: 13px;
-        }
+.recuadroCirculo {
+    position: absolute;
+    top: 9px;
+    right: 13px;
+}
 
-        .textCirculo {
-            position: absolute;
-            font-size: 14.87px;
-            color: white;
-            font-family: Arial;
-            font-weight: bold;
-        }
+.textCirculo {
+    position: absolute;
+    font-size: 14.87px;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+}
 
-        .comboCirculo {
-            height: 32px;
-            width: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.comboCirculo {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .recuadroTexto {
-            position: absolute;
-            right: 9px;
-            height: 46px;
-            bottom: 20px;
-            text-align: right;
-            color: rgb(134, 134, 134);
-            font-size: 22px;
-        }
+.recuadroTexto {
+    position: absolute;
+    right: 9px;
+    height: 46px;
+    bottom: 20px;
+    text-align: right;
+    color: rgb(134, 134, 134);
+    font-size: 22px;
+}
 
-        .titulo {
-            position: relative;
-            margin-bottom: 35px;
-            height: 55px;
-            background-color: rgb(223, 224, 229);
-            border-top: 1px solid rgb(204, 207, 214);
-        }
+.titulo {
+    position: relative;
+    margin-bottom: 35px;
+    height: 55px;
+    background-color: rgb(223, 224, 229);
+    border-top: 1px solid rgb(204, 207, 214);
+}
 
-        .tituloImg {
-            margin-left: 55px;
-            margin-right: 45px;
-            height: 50px;
-        }
+.tituloImg {
+    margin-left: 55px;
+    margin-right: 45px;
+    height: 50px;
+}
 
-        .tituloDerecha {
-            position: absolute;
-            right: 5px;
-        }
+.tituloDerecha {
+    position: absolute;
+    right: 5px;
+}
 
-        .textoTitulo {
-            font-size: 28px;
-            color: rgb(134, 134, 134);
-            font-weight: normal;
-        }
+.textoTitulo {
+    font-size: 28px;
+    color: rgb(134, 134, 134);
+    font-weight: normal;
+}
 
-        .fila {
-            position: relative;
-            background-color: rgb(254, 254, 254);
-            text-align: left;
-            height: 50px;
-            border: 0.5px solid rgb(223, 224, 229);
-        }
+.fila {
+    position: relative;
+    background-color: rgb(254, 254, 254);
+    text-align: left;
+    height: 50px;
+    border: 0.5px solid rgb(223, 224, 229);
+}
 
-        .col,
-        .colGeneral {
-            font-weight: normal;
-            float: left;
-            height: 50px;
-            width: 90px;
-            font-size: 18px;
-        }
+.col,
+.colGeneral {
+    font-weight: normal;
+    float: left;
+    height: 50px;
+    width: 90px;
+    font-size: 18px;
+}
 
-        .colGeneral {
-            position: relative;
-            border-right: 1px solid rgb(223, 224, 229);
-        }
+.colGeneral {
+    position: relative;
+    border-right: 1px solid rgb(223, 224, 229);
+}
 
-        .estado {
-            width: 28px;
-        }
+.estado {
+    width: 28px;
+}
 
-        .sender {
-            width: 192px;
-        }
+.sender {
+    width: 192px;
+}
 
-        .textSender {
-            font-weight: bold;
-            color: rgb(95, 95, 95);
-        }
+.textSender {
+    font-weight: bold;
+    color: rgb(95, 95, 95);
+}
 
         .subject {
             width: 400px;
         }
 
-        .textSubject,
-        .textDate {
-            color: rgb(95, 95, 95);
-        }
+.textSubject,
+.textDate {
+    color: rgb(95, 95, 95);
+}
 
-        .date {
-            float: right;
-            height: 50px;
-            font-size: 18px;
-            font-weight: normal;
-        }
+.date {
+    float: right;
+    height: 50px;
+    font-size: 18px;
+    font-weight: normal;
+}
 
-        .date > img{
-            padding-right: 50px;
-            padding-left: 40px;
-        }
+    .date > img {
+        padding-right: 50px;
+        padding-left: 40px;
+    }
 
-        .boton {
-            width: 85px;
-            height: 40px;
-        }
+.boton {
+    width: 85px;
+    height: 40px;
+}
 
-        .textMsn {
-            line-height: 1.5;
-        }
+.textMsn {
+    line-height: 1.5;
+}
 
-        .clear-both {
-            clear: both;
-        }
+.clear-both {
+    clear: both;
+}
 
-        #logo{
-            margin-left: 55px;
-        }
+#logo {
+    margin-left: 55px;
+}
 
-        #settings{
-            margin-left: 35px;
-            margin-right: 35px;
-        }
+#settings {
+    margin-left: 35px;
+    margin-right: 35px;
+}
 
-        #logout{
-            margin-left: 25px;
-            margin-right: 55px;
-            color: rgb(255, 80, 63);
-        }
+#logout {
+    margin-left: 25px;
+    margin-right: 55px;
+    color: rgb(255, 80, 63);
+}
 
         .checkBox {
             width: 65px;
         }
 
-        #newMessage {
-            width: 167px;
-            background-color: rgb(254, 79, 60);
-        }
+#newMessage {
+    width: 167px;
+    background-color: rgb(254, 79, 60);
+}
 
-        #menu{
-            width: 971px;
-            margin-bottom: 45px;
-        }
+#menu {
+    width: 971px;
+    margin-bottom: 45px;
+}
 
-        #submenu {
-            margin-top: 10px;
-            margin-bottom: 35px;
-            text-align: center;
-            border-bottom: solid 1px rgb(223, 224, 229);
-            height: 92px;
-        }
+#submenu {
+    margin-top: 10px;
+    margin-bottom: 35px;
+    text-align: center;
+    border-bottom: solid 1px rgb(223, 224, 229);
+    height: 92px;
+}
 
-        #sent{
-            background-color: rgb(230, 230, 230);
-        }
+#sent {
+    background-color: rgb(230, 230, 230);
+}
 
-        #todo {
-            width: 1300px;
-        }
+#todo {
+    width: 1300px;
+}
 
-        #submenuCirculo {
-            position: absolute;
-            top: -5px;
-            right: -10px;
-        }
+#submenuCirculo {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
 
-        #combo {
-            position: relative
-        }
+#combo {
+    position: relative
+}
 
-        #logo{
-            height: 92px;
-        }
+#logo {
+    height: 92px;
+}
 
-        #logo,
-        #derecha>div {
-            float: left;
-        }
+#logo,
+#derecha > div {
+    float: left;
+}
 
-        #derecha {
-            float: right;
-        }
+#derecha {
+    float: right;
+}
 
-        #puntos {
-            position: absolute;
-            right: 0;
-            background-color: rgb(254, 79, 60);
-            width: 165px;
-            height: 35px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+#puntos {
+    position: absolute;
+    right: 0;
+    background-color: rgb(254, 79, 60);
+    width: 165px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        #textoTituloCal {
-            font-size: 19px;
-        }
+#textoTituloCal {
+    font-size: 19px;
+}
 
-        #messaging {
-            border: solid 1px rgb(223, 224, 229);
-            width: 940px;
-            margin-bottom: 220px;
-        }
+#messaging {
+    border: solid 1px rgb(223, 224, 229);
+    width: 940px;
+    margin-bottom: 220px;
+}
 
-        .filaGrande {
-            background-color: rgb(248, 248, 248);
-            display:none;
-        }
+.filaGrande {
+    background-color: rgb(248, 248, 248);
+    display: none;
+}
 
-        #searchCol {
-            position: relative;
-            height: 50px;
-        }
+#searchCol {
+    position: relative;
+    height: 50px;
+}
 
-        #search {
-            position: relative;
-            position: absolute;
-            right: 51px;
-            width: 159px;
-            height: 29px;
-            border: solid 1px rgb(223, 224, 229);
-        }
+#search {
+    position: relative;
+    position: absolute;
+    right: 51px;
+    width: 159px;
+    height: 29px;
+    border: solid 1px rgb(223, 224, 229);
+}
 
-        #textSearch {
-            position: absolute;
-            font-weight: lighter;
-            left: 11px;
-        }
+#textSearch {
+    position: absolute;
+    font-weight: lighter;
+    left: 11px;
+}
 
-        #imgLupa {
-            position: absolute;
-            right: 11px;
-        }
+#imgLupa {
+    position: absolute;
+    right: 11px;
+}
 
-        .replay,
-        #change {
-            background-color: rgb(0, 218, 191);
-            color: rgb(0, 132, 130);
-        }
+.replay,
+#change {
+    background-color: rgb(0, 218, 191);
+    color: rgb(0, 132, 130);
+}
 
-        .delete,
-        #done {
-            background-color: rgb(254, 79, 60);
-            color: white;
-            margin-left: 20px;
-        }
+.delete,
+#done {
+    background-color: rgb(254, 79, 60);
+    color: white;
+    margin-left: 20px;
+}
 
-        .botones {
-            padding: 15px 50px 15px 0px;
-            float: right;
-        }
+.botones {
+    padding: 15px 50px 15px 0px;
+    float: right;
+}
 
         .subjRecuadro {
             height: 60px;
         }
 
-        #previously {
-            position: absolute;
-            width: 190px;
-            right: 51px;
-            background-color: rgb(230, 230, 230);
-            color: rgb(134, 134, 134);
-            height: 50px;
-            font-size: 13px;
-        }
+#previously {
+    position: absolute;
+    width: 190px;
+    right: 51px;
+    background-color: rgb(230, 230, 230);
+    color: rgb(134, 134, 134);
+    height: 50px;
+    font-size: 13px;
+}
 
-        #messagingCirculo {
-            position: absolute;
-            top: -15px;
-            right: -2px;
-        }
+#messagingCirculo {
+    position: absolute;
+    top: -15px;
+    right: -2px;
+}
 
-        /*
+/*
          *  Calendar INFO
          */
-        .textCal {
-            margin-left: 20px;
-            margin-right: 20px;
-            font-size: 16px;
-        }
+.textCal {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
 
-        .segInfo {
-            font-size: 16px;
-        }
+.segInfo {
+    font-size: 16px;
+}
 
-        #calendar {
-            border: 2px solid rgb(134, 134, 134);
-            background-color: rgb(251, 252, 254);
-            width: 940px;
-        }
+#calendar {
+    border: 2px solid rgb(134, 134, 134);
+    background-color: rgb(251, 252, 254);
+    width: 940px;
+}
 
-        #calInfo {
-            width: 350px;
-            height: 460px;
-            color: rgb(134, 134, 134)
-        }
+#calInfo {
+    width: 350px;
+    height: 460px;
+    color: rgb(134, 134, 134)
+}
 
-        #calcInfoInfo {
-            position: relative;
-            width: 350px;
-            height: 215px;
-            background-color: rgb(230, 230, 230);
-        }
+#calcInfoInfo {
+    position: relative;
+    width: 350px;
+    height: 215px;
+    background-color: rgb(230, 230, 230);
+}
 
-        #calcInfoFecha {
-            height: 55px;
-            font-size: 18px;
-            font-weight: normal;
-            margin-left: 20px;
-            color: rgb(95, 95, 95);
-        }
+#calcInfoFecha {
+    height: 55px;
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 20px;
+    color: rgb(95, 95, 95);
+}
 
-        #clacInfoHora {
-            font-size: 22px;
-            color: rgb(95, 95, 95);
-            font-weight: bold;
-        }
+#clacInfoHora {
+    font-size: 22px;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+}
 
-        #comboCalendar {
-            height: 515px;
-        }
+#comboCalendar {
+    height: 515px;
+}
 
-        #comboBotonesCal {
-            position: absolute;
-            bottom: 0px;
-            width: 350px;
-            height: 65px;
-        }
+#comboBotonesCal {
+    position: absolute;
+    bottom: 0px;
+    width: 350px;
+    height: 65px;
+}
 
-        #done,
-        #change {
-            width: 85px;
-            height: 35px;
-        }
+#done,
+#change {
+    width: 85px;
+    height: 35px;
+}
 
-        #done {
-            margin-left: 25px;
-        }
+#done {
+    margin-left: 25px;
+}
 
-        #imgCal,
-        #imgTel {
-            width: 70px;
-            height: 75px;
-        }
+#imgCal,
+#imgTel {
+    width: 70px;
+    height: 75px;
+}
 
-        #calInfoCliente,
-        #calInfoZone {
-            background-color: rgb(254, 79, 60);
-            font-weight: normal;
-            text-align: left;
-            color: white;
-            font-size: 20px;
-        }
+#calInfoCliente,
+#calInfoZone {
+    background-color: rgb(254, 79, 60);
+    font-weight: normal;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+}
 
-        #calInfoZone {
-            margin-top: 15px;
-            position: relative;
-        }
+#calInfoZone {
+    margin-top: 15px;
+    position: relative;
+}
 
-        #calInfoZone>img {
-            position: absolute;
-            top: -1px;
-            right: -1px;
-        }
+    #calInfoZone > img {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+    }
 
-        #today,
-        #todayDate {
-            font-size: 24px;
-        }
+#today,
+#todayDate {
+    font-size: 24px;
+}
 
-        #todayDate {
-            font-weight: normal
-        }
+#todayDate {
+    font-weight: normal
+}
 
-        #comboToday {
-            height: 80px;
-            width: 350px;
-            line-height: 1.4;
-        }
+#comboToday {
+    height: 80px;
+    width: 350px;
+    line-height: 1.4;
+}
 
-        /*
+/*
          * Calendario "Imagen"
          */
-        #remainderCalendar{
-            margin-bottom: 20px;
-        }
+#remainderCalendar {
+    margin-bottom: 20px;
+}
 
-        #calCalendario {
-            margin-left: 35px;
-            width: 450px;
-            height: 460px;
-        }
+#calCalendario {
+    margin-left: 35px;
+    width: 450px;
+    height: 460px;
+}
 
-        /*
+/*
          * Calendario Cavezal
          */
-        #calCalFecha {
-            width: 100%;
-            height: 80px;
-            font-size: 24px;
-            color: rgb(134, 134, 134);
-        }
+#calCalFecha {
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+    color: rgb(134, 134, 134);
+}
 
-        #calCalFecha>div {
-            position: relative;
-            width: 100%;
-        }
+    #calCalFecha > div {
+        position: relative;
+        width: 100%;
+    }
 
-        #imgIzquierdaCal,
-        #imgDerechaCal {
-            position: absolute;
-        }
+#imgIzquierdaCal,
+#imgDerechaCal {
+    position: absolute;
+}
 
-        #imgIzquierdaCal {
-            left: 0px;
-        }
+#imgIzquierdaCal {
+    left: 0px;
+}
 
-        #imgDerechaCal {
-            right: 0px;
-        }
+#imgDerechaCal {
+    right: 0px;
+}
 
-        /*
+/*
          * Tabla Calendario
          */
-        #cabezal,
-        .row{
-            height: 55px;
-            border: 0px;
-        }
+#cabezal,
+.row {
+    height: 55px;
+    border: 0px;
+}
 
-        .HcalCol,
-        .calCol{
-            float: left;
-            width: 64.2px;
-            border: 0px;
-            color: rgb(130, 130, 130);
-            font-size: 22px;
-        }
+.HcalCol,
+.calCol {
+    float: left;
+    width: 64.2px;
+    border: 0px;
+    color: rgb(130, 130, 130);
+    font-size: 22px;
+}
 
-        .calCol{
-             font-weight: normal;
-        } 
+.calCol {
+    font-weight: normal;
+}
 
-        #cabezal {
-            background-color: rgb(0, 218, 191);
-            color: rgb(128, 115, 122);
-        }
+#cabezal {
+    background-color: rgb(0, 218, 191);
+    color: rgb(128, 115, 122);
+}
 
-        /*
+/*
          * Circle of care
          */
-        #tCare{
-            margin-bottom: 30px;
-        }
+#tCare {
+    margin-bottom: 30px;
+}
 
-        #sCare{
-            margin-bottom: 225px;
-            border: 1px solid black;
-        }
+#sCare {
+    margin-bottom: 225px;
+    border: 1px solid black;
+}
 
-        #cFind,
-        #cCircle,
-        #cPending{
-           height: 60px;
-           float: left;
-        }
+#cFind,
+#cCircle,
+#cPending {
+    height: 60px;
+    float: left;
+}
 
-        #cFind{
-            width: 285px;
-        }
+#cFind {
+    width: 285px;
+}
 
-        #cFind,
-        #cCircle{
-            border-right: 1px solid black;
-        }
+#cFind,
+#cCircle {
+    border-right: 1px solid black;
+}
 
-        #cCircle{
-            width: 355px;
-        }
+#cCircle {
+    width: 355px;
+}
 
-        #cPending{
-            width: 300px;
-        }
+#cPending {
+    width: 300px;
+}
 
-        /*
+/*
          * Funcionalidades
          */
-        .boton:hover {
-            filter: hue-rotate(180deg);
-        }
-
+.boton:hover {
+    filter: hue-rotate(180deg);
+}

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -49,7 +50,7 @@ namespace MyEasyConnect.Controllers
                         return request;
                     }
                 }
-            }                
+            }
         }
 
         // SECCIÓ PUNTS
@@ -80,16 +81,18 @@ namespace MyEasyConnect.Controllers
                             PointsRS = punctuation
                         };
                         return point;
-                    }                    
+                    }
                 }
-            }            
+            }
         }
 
         // SECCIÓ CALENDARI
         [HttpPost]
-        public Reminder GetReminders()
+        public ReminderRS GetReminders()
         {
-            string sql = "SELECT NOTE, TITLE, REMINDER_DATE, DESCRIPTION FROM REMINDER WHERE END_USER = 6";
+            string connectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
+
+            string sql = "SELECT DESCRIPTION, REMINDER_DATE, TITLE, NOTE, ADDRESS, PHONE_NUMBER FROM REMINDER WHERE END_USER = 6";
 
             using (OracleConnection conn = new OracleConnection(connectionString))
             {
@@ -100,18 +103,25 @@ namespace MyEasyConnect.Controllers
                     cmd.Connection = conn;
                     cmd.CommandText = sql;
                     cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.Add("VAR", DateTime.Parse("02/07/2012 14:30"));
 
                     using (OracleDataReader dr = cmd.ExecuteReader())
                     {
                         Reminder reminder = new Reminder();
                         dr.Read();
 
-                        reminder.Note = dr.GetString(0);
-                        reminder.Title = dr.GetString(1);
-                        reminder.ReminderDate = dr.GetDateTime(2);
-                        reminder.Description = dr.GetString(3);
+                        reminder.Description = dr.GetString(0);
+                        reminder.ReminderDate = dr.GetDateTime(1).ToString("", CultureInfo.InvariantCulture);
+                        reminder.Title = dr.GetString(2);
+                        reminder.Note = dr.GetString(3);
+                        reminder.Address = dr.GetString(4);
+                        reminder.PhoneNumber = dr.GetString(5);
 
-                        return reminder;
+                        ReminderRS memory = new ReminderRS()
+                        {
+                            Memory = reminder
+                        };
+                        return memory;
                     }
                 }
             }
@@ -163,7 +173,7 @@ namespace MyEasyConnect.Controllers
                             mensajes.Add(message);
 
                         }
-                        GetMessagesRS request =  new GetMessagesRS();
+                        GetMessagesRS request = new GetMessagesRS();
                         request.Messages = mensajes;
                         return request;
                     }
