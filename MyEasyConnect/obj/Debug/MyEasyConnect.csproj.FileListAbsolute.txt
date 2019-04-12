@@ -127,3 +127,4 @@ C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\ob
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.dll
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.pdb
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\MyEasyConnect.dll.config
+C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.csprojAssemblyReference.cache

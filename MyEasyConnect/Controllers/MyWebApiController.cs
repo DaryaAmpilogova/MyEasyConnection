@@ -103,7 +103,6 @@ namespace MyEasyConnect.Controllers
                     cmd.Connection = conn;
                     cmd.CommandText = sql;
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.Add("VAR", DateTime.Parse("02/07/2012 14:30"));
 
                     using (OracleDataReader dr = cmd.ExecuteReader())
                     {
