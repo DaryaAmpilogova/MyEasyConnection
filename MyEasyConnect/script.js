@@ -12,14 +12,14 @@ var today = new Date();
 loadCalendar(today);
 /*
  * Show
- */ 
+ */
 function showEmail(num) {
     if ($(".email[meta-email='" + num + "'] .date img").attr("src") === abajo) {
         $(".email[meta-email='" + num + "'] .filaGrande").hide();
-        document.querySelector(".email[meta-email='" + num +"'] .date > img").src = derecha;
+        document.querySelector(".email[meta-email='" + num + "'] .date > img").src = derecha;
     } else {
         $(".email[meta-email='" + num + "'] .filaGrande").show();
-        document.querySelector(".email[meta-email='" + num +"'] .date > img").src = abajo;
+        document.querySelector(".email[meta-email='" + num + "'] .date > img").src = abajo;
     }
 }
 
@@ -49,9 +49,9 @@ document.querySelector("#imgDerechaCal").addEventListener("click", function () {
     monthChange(new Date(today.getFullYear(), today.getMonth() + ++motnhModifier));
 });
 
-function loadCalendar(fecha){
-	document.querySelector("#date").innerText = fecha.getDate() + " / " + months[fecha.getMonth()] + " / " + days[fecha.getDay()];
-	monthChange(fecha);
+function loadCalendar(fecha) {
+    document.querySelector("#date").innerText = fecha.getDate() + " / " + months[fecha.getMonth()] + " / " + days[fecha.getDay()];
+    monthChange(fecha);
 
 }
 
@@ -99,15 +99,6 @@ $.post(uri + "GetPoints")
         document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
     });
 
-/*
-// REMINDERS IN THE CALENDAR
-$.post(uri + "GetReminders")
-    .done(function (data) {
-     // Li passem la informaci� dels punts del usuari dins la seva posici� del html
-     document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
-    });
-    */
-
 // Recordatoris del calendari
 $(document).ready(
     function () {
@@ -126,32 +117,29 @@ $(document).ready(
                     // Llevarem el display de tot el contingut del recordatori per poder ser visible
                     $("#calInfoCliente, #calInfoZone, #calcInfoInfo").css("display", "");
 
-                    if (today == data.Memory.ReminderDate) {
-                        // Passarem la informaci� que hi ha emmagatzemada a la base de dades, dins cada una de les seves posicions del html
-                        document.querySelector("#description").innerHTML = data.Memory.Description;
-                        document.querySelector("#reminder-date").innerHTML = data.Memory.ReminderDate;
-                        document.querySelector("#title").innerHTML = data.Memory.Title;
-                        document.querySelector("#address").innerHTML = data.Memory.Address;
-                        document.querySelector("#phone-number").innerHTML = data.Memory.PhoneNumber;
-                    }
+                    // Passarem la informació que hi ha emmagatzemada a la base de dades, dins cada una de les seves posicions del html
+                    document.querySelector("#description").innerHTML = data.Memory.Description;
+                    document.querySelector("#reminder-date").innerHTML = data.Memory.ReminderDate;
+                    document.querySelector("#title").innerHTML = data.Memory.Title;
+                    document.querySelector("#address").innerHTML = data.Memory.Address;
+                    document.querySelector("#phone-number").innerHTML = data.Memory.PhoneNumber;
 
-                    // En clicar damunt la creu del recordatori, aquest es tancar�
+                    // En clicar damunt la creu del recordatori, aquest es tancarà
                     $("#img-cruz").on("click", function () {
                         $("#calInfoZone, #calcInfoInfo").css("display", "none");
                     });
+                });
+                // Li canviem el color quan passem per damunt el dia 
+                $(".calCol").hover(
+                    function () { $(this).css({ "color": "#33BBFF", "background-color": "#FF3374", "border-radius": "800px" }) },
+                    function () { $(this).css({ "color": "", "background-color": "" }) }
+                );
             });
-
-        // Li canviem el color quan passem per damunt el dia 
-        $(".calCol").hover(
-            function () { $(this).css({ "color": "#33BBFF", "background-color": "#FF3374", "border-radius": "800px" }) },
-            function () { $(this).css({ "color": "", "background-color": "" }) }
-        );
-    });
     });
 
 /*
  * MESSAGES
- */ 
+ */
 $.post(uri + "GetMessages")
     .done(function (data) {
         var count = 0;
@@ -159,7 +147,7 @@ $.post(uri + "GetMessages")
         $.each(data.Messages, function (key, item) {
 
             document.querySelector("#messaging").appendChild(setEmail(count++, item));
-            
+
         });
 
         document.querySelector("#messaging").appendChild(prevMessages());
@@ -256,7 +244,7 @@ function setDate(mDate, msgNum) {
     var span = document.createElement("span");
     span.className = "textDate";
     var day = new Date(mDate)
-    span.innerText = day.getDate() + " " + months[day.getMonth()].substring(0,1) + months[day.getMonth()].substring(1).toLowerCase() + " " + day.getFullYear();
+    span.innerText = day.getDate() + " " + months[day.getMonth()].substring(0, 1) + months[day.getMonth()].substring(1).toLowerCase() + " " + day.getFullYear();
     div.appendChild(span)
 
     var img = document.createElement("img");
@@ -296,7 +284,7 @@ function setMsnTitle(mTitle) {
     title.classList.add("subjRecuadro")
     title.classList.add("msn");
     title.classList.add("centrarAlinear");
-    
+
     var h1 = document.createElement("h1");
     h1.innerText = mTitle;
 
