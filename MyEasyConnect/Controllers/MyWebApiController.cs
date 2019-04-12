@@ -8,18 +8,19 @@ using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Web.Http;
 
 namespace MyEasyConnect.Controllers
 {
     public class MyWebApiController : ApiController
     {
+        private string connectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
+
+        // Submenú
         [HttpPost]
         public CurrentUserRS GetCurrentUser()
         {
-
-            string connectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
-
             string sql = "SELECT NAME, SURNAMES, AVATAR FROM END_USER WHERE ID = 6";
 
             using (OracleConnection conn = new OracleConnection(connectionString))
@@ -29,7 +30,7 @@ namespace MyEasyConnect.Controllers
                 using (OracleCommand cmd = new OracleCommand())
                 {
                     cmd.Connection = conn;
-                    cmd.CommandText = sql.ToString();
+                    cmd.CommandText = sql;
 
                     cmd.CommandType = CommandType.Text;
 
@@ -49,15 +50,13 @@ namespace MyEasyConnect.Controllers
                         return request;
                     }
                 }
-            }                
+            }
         }
 
         // SECCIÓ PUNTS
         [HttpPost]
         public UserPointsRS GetPoints()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
-
             string sql = "SELECT POINTS FROM END_USER WHERE ID = 6";
 
             using (OracleConnection conn = new OracleConnection(connectionString))
@@ -82,19 +81,18 @@ namespace MyEasyConnect.Controllers
                             PointsRS = punctuation
                         };
                         return point;
-                    }                    
+                    }
                 }
-            }            
+            }
         }
 
         // SECCIÓ CALENDARI
-
         [HttpPost]
         public ReminderRS GetReminders()
         {
             string connectionString = ConfigurationManager.ConnectionStrings["default"].ConnectionString;
 
-            string sql = "SELECT DESCRIPTION, REMINDER_DATE, TITLE, NOTE, ADDRESS, PHONE_NUMBER FROM REMINDER WHERE END_USER = 6";            
+            string sql = "SELECT DESCRIPTION, REMINDER_DATE, TITLE, NOTE, ADDRESS, PHONE_NUMBER FROM REMINDER WHERE END_USER = 6";
 
             using (OracleConnection conn = new OracleConnection(connectionString))
             {
@@ -128,5 +126,60 @@ namespace MyEasyConnect.Controllers
                 }
             }
         }
+
+        //Mensages
+        [HttpPost]
+        public GetMessagesRS GetMessages()
+        {
+
+            StringBuilder sql = new StringBuilder();
+            sql.Append("SELECT SUBJECT, ");
+            sql.Append("       CONTENT, ");
+            sql.Append("       SEND_DATE, ");
+            sql.Append("       NAME, ");
+            sql.Append("       SURNAMES, ");
+            sql.Append("       STATE ");
+            sql.Append("  FROM END_USER_MESSAGE  E ");
+            sql.Append("       JOIN MESSAGE M ON E.MESSAGE = M.ID ");
+            sql.Append("       JOIN END_USER U ON U.ID = M.SENDER ");
+            sql.Append(" WHERE ADDRESSEE = 6 ");
+            sql.Append(" ORDER BY M.SEND_DATE DESC");
+
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                conn.Open();
+
+                using (OracleCommand cmd = new OracleCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql.ToString();
+                    cmd.CommandType = CommandType.Text;
+
+                    using (OracleDataReader dr = cmd.ExecuteReader())
+                    {
+                        List<Message> mensajes = new List<Message>();
+                        while (dr.Read())
+                        {
+                            Message message = new Message();
+                            User user = new User();
+
+                            message.Subject = dr.GetString(0);
+                            message.Content = dr.GetString(1);
+                            message.Date = dr.GetDateTime(2);
+                            user.Name = dr.GetString(3);
+                            user.Surnames = dr.GetString(4);
+                            message.Sender = user;
+                            message.State = dr.GetInt32(5);
+                            mensajes.Add(message);
+
+                        }
+                        GetMessagesRS request = new GetMessagesRS();
+                        request.Messages = mensajes;
+                        return request;
+                    }
+                }
+            }
+        }
+
     }
 }

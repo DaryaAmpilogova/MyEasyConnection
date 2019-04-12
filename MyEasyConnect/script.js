@@ -64,6 +64,8 @@ function setCalDays() {
     // *daysInMonth - https://medium.com/@nitinpatel_20236/challenge-of-building-a-calendar-with-pure-javascript-a86f1303267d
     var daysInMonth = 32 - new Date(today.getFullYear(), today.getMonth() + motnhModifier, 32).getDate();
 
+    var daysMonth = document.querySelectorAll(".calCol > span");
+    var dayModifier = new Date(today.getFullYear(), today.getMonth() + motnhModifier, 1).getDay();
 
     for (var i = 0; i < daysMonth.length; i++) {
         daysMonth[i].innerText = "";
@@ -97,13 +99,14 @@ $.post(uri + "GetPoints")
         document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
     });
 
+/*
 // REMINDERS IN THE CALENDAR
 $.post(uri + "GetReminders")
     .done(function (data) {
      // Li passem la informaci� dels punts del usuari dins la seva posici� del html
      document.querySelector("#user_points").innerHTML = "Total Points " + data.PointsRS.Points;
     });
-
+    */
 
 // Recordatoris del calendari
 $(document).ready(

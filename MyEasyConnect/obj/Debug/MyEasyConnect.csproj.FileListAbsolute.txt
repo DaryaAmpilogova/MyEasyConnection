@@ -122,7 +122,6 @@ C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bi
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\System.Web.Http.xml
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\System.Web.Http.WebHost.xml
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.csprojAssemblyReference.cache
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.csproj.CoreCompileInputs.cache
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.csproj.CopyComplete
 C:\Users\d.ampilogova\Desktop\WebApiConnection\MyEasyConnection\MyEasyConnect\obj\Debug\MyEasyConnect.dll
