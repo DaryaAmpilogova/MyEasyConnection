@@ -573,8 +573,8 @@ p {
 }
 
 /*
-         * Funcionalidades
-         */
+* Funcionalidades
+*/
 .boton:hover {
     filter: hue-rotate(180deg);
 }

@@ -79,7 +79,6 @@ function setCalDays() {
 /*
  * WEB API
  */
-
 var uri = "api/mywebapi/";
 
 /*
@@ -90,7 +89,6 @@ $.post(uri + "GetCurrentUser")
         document.querySelector("#current_user_name").innerText = data.UserRS.Name + " " + data.UserRS.Surnames;
         document.querySelector("#current_user_img").src = data.UserRS.Avatar;
     });
-
 
 // Puntuació
 $.post(uri + "GetPoints")

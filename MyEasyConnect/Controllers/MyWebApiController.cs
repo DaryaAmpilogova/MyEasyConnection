@@ -180,5 +180,46 @@ namespace MyEasyConnect.Controllers
             }
         }
 
+        //Circle of care
+        [HttpPost]
+        public GetCircleOfCareRS GetCircleOfCare()
+        {
+
+            StringBuilder sql = new StringBuilder();
+            sql.Append("SELECT NAME, SURNAMES, PROFESSION ");
+            sql.Append("  FROM END_USER  U ");
+            sql.Append("       JOIN END_USER_CIRCLE_OF_CARE EC ON USER_ID = U.ID ");
+            sql.Append("       JOIN CIRCLE_OF_CARE C ON CIRCLE_OF_CARE_ID = C.ID ");
+            sql.Append("       WHERE OWNER = 6; ");
+
+            using (OracleConnection conn = new OracleConnection(connectionString))
+            {
+                conn.Open();
+
+                using (OracleCommand cmd = new OracleCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = sql.ToString();
+                    cmd.CommandType = CommandType.Text;
+
+                    using (OracleDataReader dr = cmd.ExecuteReader())
+                    {
+                        GetCircleOfCareRS request = new GetCircleOfCareRS();
+                        while (dr.Read())
+                        {
+                            User user = new User();
+                            
+                            user.Name = dr.GetString(0);
+                            user.Surnames = dr.GetString(1);
+                            user.Profession = dr.GetString(2);
+
+                            request.Users.Add(user);
+                        }
+                        
+                        return request;
+                    }
+                }
+            }
+        }
     }
 }
