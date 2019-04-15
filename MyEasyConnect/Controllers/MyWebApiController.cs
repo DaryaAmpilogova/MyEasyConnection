@@ -190,7 +190,7 @@ namespace MyEasyConnect.Controllers
             sql.Append("  FROM END_USER  U ");
             sql.Append("       JOIN END_USER_CIRCLE_OF_CARE EC ON USER_ID = U.ID ");
             sql.Append("       JOIN CIRCLE_OF_CARE C ON CIRCLE_OF_CARE_ID = C.ID ");
-            sql.Append("       WHERE OWNER = 6; ");
+            sql.Append("       WHERE OWNER = 6 ");
 
             using (OracleConnection conn = new OracleConnection(connectionString))
             {
@@ -204,7 +204,7 @@ namespace MyEasyConnect.Controllers
 
                     using (OracleDataReader dr = cmd.ExecuteReader())
                     {
-                        GetCircleOfCareRS request = new GetCircleOfCareRS();
+                        List<User> users = new List<User>();
                         while (dr.Read())
                         {
                             User user = new User();
@@ -213,9 +213,10 @@ namespace MyEasyConnect.Controllers
                             user.Surnames = dr.GetString(1);
                             user.Profession = dr.GetString(2);
 
-                            request.Users.Add(user);
+                            users.Add(user);
                         }
-                        
+                        GetCircleOfCareRS request = new GetCircleOfCareRS();
+                        request.Users = users;
                         return request;
                     }
                 }
